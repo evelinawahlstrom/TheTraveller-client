@@ -6,6 +6,8 @@ I am currently working on this project to showcase my skills on both frontend + 
 
 I wanted to create a "instagram for travellers". I myself, love to travel and connect with new people. The thought is to show places a person been to through both images and also text, to tip fellow travellers on genuine experiences.
 
+**This is the CLIENT**
+
 ## User stories :notebook:
 
 1.	As a user I want to be able to register with an email + password. 
@@ -16,7 +18,8 @@ I wanted to create a "instagram for travellers". I myself, love to travel and co
 6.	After editing/deleting/adding a description I click “save", I’m then redirected to the image board.
 7. As a user I'm able to log out from my profile.
 
-## OVERVIEW OF ENDPOINTS
+## Related repositories
+**[Server](https://github.com/evelinawahlstrom/TheTraveller-server)**
 
 ## Table of contents:
 - **[Technologies used](#technologies-used)**
