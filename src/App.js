@@ -1,15 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import React, {Component} from "react";
+import { Route, Link } from "react-router-dom";
+import { connect } from "react-redux";
+import SignupContainer from './components/SignupContainer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      THE TRAVELLER
-      </header>
-    </div>
-  );
+class App extends Component{
+  render() {
+    return (
+        <div className="App-div">
+          <h1>THE TRAVELLER</h1>
+          <div className="links">
+          <Link to="/signup"> Signup </Link>
+          <Route path="/signup" exact component={SignupContainer} />
+          </div>
+      </div>
+    );
+  }
 }
 
-export default App;
+// reduxstate
+const mapStateToProps = state => {
+  return {
+    loggedIn: state.auth !== null
+  };
+};
+
+export default connect(mapStateToProps)(App);
