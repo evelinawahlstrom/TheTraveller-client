@@ -3,6 +3,8 @@
 
 I am currently working on this project to showcase my skills on both frontend + backend, making a fullstack application.
 
+I wanted to create a "instagram for travellers". I myself, love to travel and connect with new people. The thought is to show places a person been to through both images and also text, to tip fellow travellers on genuine experiences.
+
 ## User stories
 
 1.	As a user I want to be able to register with an email + password 
