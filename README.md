@@ -8,12 +8,13 @@ I wanted to create a "instagram for travellers". I myself, love to travel and co
 
 ## User stories :notebook:
 
-1.	As a user I want to be able to register with an email + password 
-2.	As a user I then want to be able to login to my profile page 
-3.	As a user I am able to add images from my travels
-4.	As a user when I click on an image, I’m redirected to the that image description endpoint (/image/id)
-5.	At the /image/id I’m able to add a description, edit my current descriptions and also delete a description
-6.	After editing/deleting/adding a description I click “save” and I’m then redirected to the image board
+1.	As a user I want to be able to register with an email + password. 
+2.	As a user I then want to be able to login to my profile page.
+3.	As a user I am able to add images from my travels.
+4.	As a user when I click on an image, I’m redirected to the that image description endpoint (/image/id).
+5.	At the /image/id I’m able to add a description, edit my current descriptions and also delete a description.
+6.	After editing/deleting/adding a description I click “save", I’m then redirected to the image board.
+7. As a user I'm able to log out from my profile.
 
 ## OVERVIEW OF ENDPOINTS
 
