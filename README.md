@@ -1,6 +1,6 @@
  # :earth_asia: THE TRAVELLER :earth_asia:
  
-## What this project is about :woman_technologist: :
+## What this project is about :woman_technologist: 
 
 I am currently working on this project to showcase my skills on both frontend + backend, making a fullstack application.
 
