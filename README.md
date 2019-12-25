@@ -1,68 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ # :earth_asia: THE TRAVELLER :earth_asia:
+## What this project is about:
 
-## Available Scripts
+I am currently working on this project to showcase my skills on both frontend + backend, making a fullstack application.
 
-In the project directory, you can run:
+## User stories
 
-### `npm start`
+1.	As a user I want to be able to register with an email + password 
+2.	As a user I then want to be able to login to my profile page 
+3.	As a user I am able to add images from my travels
+4.	As a user when I click on an image, I’m redirected to the that image description endpoint (/image/id)
+5.	At the /image/id I’m able to add a description, edit my current descriptions and also delete a description
+6.	After editing/deleting/adding a description I click “save” and I’m then redirected to the image board
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## OVERVIEW OF ENDPOINTS
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Table of contents:
+- **[Technologies used](#technologies-used)**
+- **[How to install](#how-to-install)**
+- **[Create React App docs](#create-react-app)**
+- **[Features working](#features-working)**
+- **[Gif showcasing my project](#gif-showing-my-login-page)**
+- **[My progress](#my-progress)**
+- **[To do](#to-do)**
 
-### `npm test`
+## Technologies used
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to install
 
-### `npm run build`
+1. Clone the git repository
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`git clone https://github.com/evelinawahlstrom/TheTraveller-client`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+2. cd into the folder TheTraveller-client
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Run npm install and Before launching the app( with npm start ), please make sure that the server side is up and running.
+-  Checkout the **[Server ReadMe](https://github.com/evelinawahlstrom/TheTraveller-server)** to install and run the server.
 
-### `npm run eject`
+4. Run npm start. The app runs in the development mode on http://localhost:3000 in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Create React App
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project was developer with the help of using the create-react-app cli.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**[The standard create-react-app docs can be found in here](./create-react-app-docs.md)**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Features working
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Gif showcasing my project
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## My progress
+Follow my progress developing in the **[Projects folder](https://github.com/evelinawahlstrom/TheTraveller-client/projects)**
 
-### Analyzing the Bundle Size
+## To do
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
