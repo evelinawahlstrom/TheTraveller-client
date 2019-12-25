@@ -31,7 +31,7 @@ I am currently working on this project to showcase my skills on both frontend + 
 
 `git clone https://github.com/evelinawahlstrom/TheTraveller-client`
 
-2. cd into the folder TheTraveller-client
+2. cd into the folder `TheTraveller-client`
 
 3. Run npm install and Before launching the app( with npm start ), please make sure that the server side is up and running.
 -  Checkout the **[Server ReadMe](https://github.com/evelinawahlstrom/TheTraveller-server)** to install and run the server.
