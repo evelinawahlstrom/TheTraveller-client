@@ -1,11 +1,9 @@
-const initialState = {
+import { combineReducers } from "redux"
+import auth from './auth'
 
-}
 
-export default (state = initialState, { type }) => {
-    switch (type) {
-        
-    default:
-        return state
-    }
-}
+
+
+export default combineReducers({
+    auth,
+ })
