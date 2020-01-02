@@ -39,7 +39,6 @@ export default class SignupContainer extends Component {
             onSubmit={this.onSubmit}
             onChange={this.onChange}
             values={this.state}/>
-            <p>Already have an account? Go to: <Link to="/login"> Login</Link></p>
             </div>
         )
     }
