@@ -12,8 +12,14 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.background{
+  background-size: cover;
+  text-align: center;
+  height: 400px;
+  padding: 10vh;
+}
 
-.App-header {
+.App-div {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -36,3 +42,23 @@
     transform: rotate(360deg);
   }
 }
+
+.links {
+  text-align: center;
+}
+
+.Title {
+  text-align: center;
+}
+
+.card-50{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6vh
+}
+
+.logo{
+  vertical-align: center
+}
+
