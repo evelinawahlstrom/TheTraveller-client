@@ -9,58 +9,58 @@ import TextField from '@material-ui/core/TextField';
 import Container from '@material-ui/core/Container';
 
 class SignupForm extends Component {
-	render() {
-		const { onChange, onSubmit } = this.props;
-		const {email, password } = this.props.values;
-		return (
+  render() {
+    const { onChange, onSubmit } = this.props;
+    const { email, password } = this.props.values;
+    return (
 
-			<div className="background">
-				<Container>
+      <div className="background">
+        <Container>
 
-					<Card className="card-50 component-center">
-						<CardContent>
-							<Typography variant="h4">
-								Sign Up
+          <Card className="card-50 component-center">
+            <CardContent>
+              <Typography color="textSecondary"variant="h4">
+                Sign Up
 							</Typography>
 
-							<form noValidate autoComplete="off" onSubmit={onSubmit}>
-								<TextField
-									id="outlined-name"
-									label="Email"
-									className="form-control-lg"
-									value={email}
-									onChange={onChange}
-									name="email"
-									margin="normal"
-									variant="outlined"
-								/>
-								<TextField
-									id="outlined-password-input"
-									label="Password"
-									className="form-control-lg"
-									type="password"
-									onChange={onChange}
-									name="password"
-									value={password}
-									margin="normal"
-									variant="outlined"
-								/>
+              <form noValidate autoComplete="off" onSubmit={onSubmit}>
+                <TextField
+                  id="outlined-name"
+                  label="Email"
+                  className="form-control-lg"
+                  value={email}
+                  onChange={onChange}
+                  name="email"
+                  margin="normal"
+                  variant="outlined"
+                />
+                <TextField
+                  id="outlined-password-input"
+                  label="Password"
+                  className="form-control-lg"
+                  type="password"
+                  onChange={onChange}
+                  name="password"
+                  value={password}
+                  margin="normal"
+                  variant="outlined"
+                />
 
-								<CardActions style={{justifyContent: 'center'}}>
-									<Button 
-									type="submit" 
-									variant="contained"
-									size="large"
-									color="secondary">Sign Up</Button>
-								</CardActions>
-							</form>
-						</CardContent>
-					</Card>
-				</Container>
-				<span className="spacer-lg"></span>
-			</div>
-		)
-	}
+                <CardActions style={{ justifyContent: 'center' }}>
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    size="large"
+                    color="primary">Sign up</Button>
+                </CardActions>
+              </form>
+            </CardContent>
+          </Card>
+        </Container>
+        <span className="spacer-lg"></span>
+      </div>
+    )
+  }
 }
 
 export default SignupForm;

@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import logo from './images/logo.png'
 import SignupContainer from './components/SignupContainer'
 import LoginFormContainer from './components/LoginFormContainer'
 
@@ -25,21 +26,26 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function ButtonAppBar() {
+export default function App() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <AppBar position="static" color="inherit">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-         <Typography variant="h4" className={classes.title}>
-            The Traveller
-          </Typography>
-          <Link to="/login"><Button color="inherit">Login</Button></Link>
-          <Link to="/signup"><Button color="inherit">Sign up</Button></Link>
+        <Link to="/">
+        <img 
+        className='logo'
+        height='80px'
+        align='middle'
+        src={logo}
+        alt='app-logo'>
+        </img>
+        </Link>
+          <div className="links"><Link to="/login"><Button color="primary">Login</Button></Link>
+          |
+          <Link to="/signup"><Button color="primary">Sign up</Button></Link>
+          </div>
         </Toolbar>
       </AppBar>
       <Route path="/login" exact component={LoginFormContainer} />
@@ -47,4 +53,3 @@ export default function ButtonAppBar() {
     </div>
   );
 }
-

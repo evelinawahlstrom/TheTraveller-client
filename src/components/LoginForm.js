@@ -17,7 +17,7 @@ class LoginForm extends Component {
 				<Container>
 				<Card className="card-50">
 				<CardContent>
-				   <Typography variant="h4">
+				   <Typography variant="h4" color="textSecondary">
 				  	Login
 				   </Typography>
 			   <form noValidate onSubmit={onSubmit}>
@@ -48,7 +48,7 @@ class LoginForm extends Component {
 					type="submit" 
 					variant="contained"
 					size="large"
-					color="secondary">Login</Button>
+					color="primary">Login</Button>
                 </CardActions>
                  </form>
                 </CardContent>
