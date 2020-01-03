@@ -15,7 +15,9 @@ render() {
         {this.props.loggedIn ? (
         <b>Image Board</b>
         ) : (
-          <div className="links"><p>Please login to see Image Board</p></div>
+          <div className="links">
+          <br/>
+          <h3><i>Please login to see Image Board</i></h3></div>
         )}
       </div>
     );

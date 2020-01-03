@@ -15,6 +15,7 @@ import globe from './images/globe.gif'
 import SignupContainer from './components/SignupContainer'
 import LoginFormContainer from './components/LoginFormContainer'
 import ImageBoardContainer from './components/ImageBoardContainer'
+import Homepage from './components/Homepage'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -50,6 +51,7 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <div>
+      <Route path="/" exact component={Homepage}/>
       <Route path="/login" exact component={LoginFormContainer} />
       <Route path="/signup" exact component={SignupContainer} />
       <Route path="/images" exact component= {ImageBoardContainer} />

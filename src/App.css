@@ -55,10 +55,21 @@
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 6vh
+  margin-top: 6vh;
 }
 
 .logo{
   vertical-align: center
 }
 
+.globe{
+  background-size: cover;
+  height: auto;
+  width: 50%;
+  margin: auto;
+  padding-top: 80px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 60px;
+  display: flex;
+}
