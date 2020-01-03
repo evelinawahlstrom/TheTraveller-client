@@ -3,7 +3,7 @@ import travel from '../images/travel.gif'
 
 export default function Homepage() {
     return (
-        <div>
+        <div className="background">
         <img 
         className='globe'
         align='middle'
