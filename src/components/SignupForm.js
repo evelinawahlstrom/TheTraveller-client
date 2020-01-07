@@ -13,13 +13,14 @@ class SignupForm extends Component {
     const { onChange, onSubmit } = this.props;
     const { email, password } = this.props.values;
     return (
-
-      <div className="background">
-        <Container>
-
+      <div>
+        <Container className="background">
           <Card className="card-50 component-center">
             <CardContent>
-              <Typography color="textSecondary"variant="h4">
+              <Typography 
+              color="textSecondary"
+              variant="h4"
+              align="center">
                 Sign Up
 							</Typography>
 

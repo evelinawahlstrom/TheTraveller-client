@@ -8,7 +8,12 @@ export default function ImageBoard(props) {
     <div className="list">
       {props.images.map(image => {
         return (
-          <img src={image.picture} width="200" height="200" alt="image-pic" />
+          <Link to={`/images/${image.id}`}>
+          <img src={image.picture} 
+          width="200" 
+          height="200" 
+          alt="image-pic" />
+          </Link>
         );
       })}
     </div>
