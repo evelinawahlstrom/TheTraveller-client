@@ -17,7 +17,10 @@ class LoginForm extends Component {
 				<Container>
 				<Card className="card-50">
 				<CardContent>
-				   <Typography variant="h4" color="textSecondary">
+				   <Typography 
+				   variant="h4" 
+				   color="textSecondary"
+				   align="center">
 				  	Login
 				   </Typography>
 			   <form noValidate onSubmit={onSubmit}>
