@@ -35,6 +35,7 @@ I wanted to create a "instagram for travellers". I myself, love to travel and co
 - **[To do](#to-do)**
 
 ## Technologies used
+React, Redux, React-router Redux-thunk, Superagent, Material-UI
 
 ## How to install
 
