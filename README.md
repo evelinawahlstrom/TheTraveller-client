@@ -1,6 +1,6 @@
  # :earth_asia: THE TRAVELLER :earth_asia:
  
-:fast_forward:**[CHECK OUT MY DEPLOYED VERSION HERE - *NOTE THAT IS STILL IN PROGRESS*](https://cocky-kepler-5cdbd4.netlify.com/)**:rewind:
+:fast_forward: **[CHECK OUT MY DEPLOYED VERSION HERE - *NOTE THAT IS STILL IN PROGRESS*](https://cocky-kepler-5cdbd4.netlify.com/)** :rewind:
  <br/>
  **Check out [Features working](#features-working) for features finished**
  
