@@ -1,7 +1,6 @@
 import './App.css';
 import React, {Component} from "react";
 import { Route, Link } from "react-router-dom";
-import { connect } from "react-redux";
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -16,6 +15,7 @@ import Homepage from './components/Homepage'
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    background: "black",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
 export default function App() {
   const classes = useStyles();
   return (
-    <div>
+    <div className="background">
     <div className={classes.root}>
       <AppBar position="static" color="inherit">
         <Toolbar>

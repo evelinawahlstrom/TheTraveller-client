@@ -12,13 +12,12 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .background{
   background-color: thistle;
-  /* background-color: rgba(50, 115, 220, 0.3); */
-  min-height: 100%;
-  min-width: 1024px;
+  min-height: 100vh;
+  min-width: 100vh;
 }
-
 
 .App-link {
   color: #61dafb;
@@ -37,17 +36,23 @@
   text-align: center;
 }
 
+.form {
+  margin-top: 100px;
+  text-align: center;
+}
+
 .Title {
   text-align: center;
 }
 
 .card-50{
   width: 50%;
+  height: 30vh;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  /* margin-top: 6vh; */
+  display: center;
+  margin-top: 10px;
+  border-radius: 50px;
 }
 
 .logo{

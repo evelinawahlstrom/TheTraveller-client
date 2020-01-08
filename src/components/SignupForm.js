@@ -13,9 +13,9 @@ class SignupForm extends Component {
     const { onChange, onSubmit } = this.props;
     const { email, password } = this.props.values;
     return (
-      <div>
-        <Container className="background">
-          <Card className="card-50 component-center">
+      <div className="form">
+        <Container>
+          <Card className="card-50">
             <CardContent>
               <Typography 
               color="textSecondary"
@@ -23,8 +23,9 @@ class SignupForm extends Component {
               align="center">
                 Sign Up
 							</Typography>
-
-              <form noValidate autoComplete="off" onSubmit={onSubmit}>
+              <form 
+              noValidate autoComplete="off" onSubmit={onSubmit}
+              >
                 <TextField
                   id="outlined-name"
                   label="Email"
