@@ -1,5 +1,8 @@
  # :earth_asia: THE TRAVELLER :earth_asia:
  
+ **[CHECK OUT MY DEPLOYED VERSION HERE - OBS! IN PROGRESS](https://cocky-kepler-5cdbd4.netlify.com/)**
+ **Check out[Features working](#features-working) for what I'm done with**
+ 
 ## What this project is about :woman_technologist: 
 
 *OBS! IN PROGRESS*
