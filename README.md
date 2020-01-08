@@ -1,8 +1,8 @@
  # :earth_asia: THE TRAVELLER :earth_asia:
  
- **[CHECK OUT MY DEPLOYED VERSION HERE - OBS! IN PROGRESS](https://cocky-kepler-5cdbd4.netlify.com/)**
+:fast_forward:**[CHECK OUT MY DEPLOYED VERSION HERE - *NOTE THAT IS STILL IN PROGRESS*](https://cocky-kepler-5cdbd4.netlify.com/)**:rewind:
  <br/>
- **Check out[Features working](#features-working) for what I'm done with**
+ **Check out [Features working](#features-working) for features finished**
  
 ## What this project is about :woman_technologist: 
 
