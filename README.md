@@ -1,9 +1,5 @@
  # :earth_asia: THE TRAVELLER :earth_asia:
  
-:fast_forward: **[CHECK OUT MY DEPLOYED VERSION HERE - *NOTE THAT IS STILL IN PROGRESS*](https://cocky-kepler-5cdbd4.netlify.com/)** :rewind:
- <br/>
- **Check out [Features working](#features-working) for features finished**
- 
 ## What this project is about :woman_technologist: 
 
 I am currently working on this project to showcase my skills on both frontend + backend, making a fullstack application.
