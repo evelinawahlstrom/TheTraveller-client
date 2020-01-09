@@ -8,11 +8,11 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles(theme => ({
   root: {
-      margin: theme.spacing(1),
+      margin: theme.spacing(12),
       flexGrow: 1,
-      paddingTop: 20,
-      paddingLeft: 450,
-      paddingRight: 50,
+      paddingTop: 1,
+      paddingLeft: 200,
+      paddingRight: 100,
       paddingBottom: 10,
       borderRadius: '25px',
   },
@@ -20,9 +20,13 @@ const useStyles = makeStyles(theme => ({
     display: 'none',
   },
   paper: {
-    padding: theme.spacing(2),
+    paddingTop: theme.spacing(2),
+    paddingLeft: theme.spacing(22),
+    paddingRight: theme.spacing(12),
+    paddingBottom: theme.spacing(2),
     textAlign: 'center',
     alignItems: 'center', 
+    borderRadius: '40px'
   },
 }));
 
@@ -33,20 +37,20 @@ export default function ImageBoard(props) {
   return (
     <div className={classes.root}>
     <Grid container spacing={10}>
-    <Grid item xl={12} sm={6}>
     <Paper className={classes.paper}>
+    <Grid item xl={10} md={10}>
       {props.images.map(image => {
         return (
          <Link to={`/images/${image.id}`}>
           <img src={image.picture} 
-          width="100%" 
-          height="100%" 
+          width="250px" 
+          height="250px" 
           alt="image-pic" />
           </Link>
         );
       })}
-      </Paper>
       </Grid>
+      </Paper>
       </Grid>
     </div>
   );
