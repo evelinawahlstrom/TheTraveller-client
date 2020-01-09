@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import EditIcon from '@material-ui/icons/Edit';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -24,7 +23,7 @@ const classes = useStyles();
   return (
     <div className={classes.root}>
     <Grid container spacing={3}>
-    <Grid item xs={3} sm={6}>
+    <Grid item md={10}>
     <h4>{props.image.name}</h4>
     <br/>
     <img src={props.image.picture} 
