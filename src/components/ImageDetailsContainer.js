@@ -9,7 +9,6 @@ class ImageDetailsContainer extends React.Component {
       this.props.loadImage(Number(this.props.match.params.id));
     }
   
-
     render() {
       return (
         <div>
@@ -18,8 +17,6 @@ class ImageDetailsContainer extends React.Component {
       );
     }
   }
-  
-  
   
   const mapStateToProps = state => {
     return {
