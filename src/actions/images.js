@@ -3,6 +3,7 @@ import { url } from "../url"
 
 export const FETCH_IMAGEBOARD = "FETCH_IMAGEBOARD";
 export const FETCH_IMAGE = "FETCH_IMAGE"
+export const ADD_IMAGE = "ADD_IMAGE"
 
 const imageBoardFetch = images => ({
   type: FETCH_IMAGEBOARD,
@@ -38,4 +39,21 @@ export const loadImage = (id) => (dispatch,
       dispatch(fetchImageSuccess(response.body));
     })
     .catch(console.error)
+};
+
+const imageCreateSuccess = image => ({
+  type: ADD_IMAGE,
+  payload: image
+});
+
+export const createImage = (id) => (dispatch, getState) => {
+  const token = getState().auth
+  request
+  .post(`${url}/images`)
+  .set ("Authorization", `Bearer ${token}`)
+  .send(id)
+  .then(response => {
+      dispatch(imageCreateSuccess(response.body));
+    })
+    .catch(console.error);
 };

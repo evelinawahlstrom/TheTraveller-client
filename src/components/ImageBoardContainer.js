@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { loadImageBoard } from '../actions/images'
 import ImageBoard from './ImageBoard'
+import AddImageContainer from "./AddImageContainer"
 
 class ImageBoardContainer extends Component {
 componentDidMount() {
@@ -13,7 +14,7 @@ render() {
       <div>
         <ImageBoard images={this.props.images} />
         {this.props.loggedIn ? (
-        <b>Image Board</b>
+          <AddImageContainer/>
         ) : (
           <div className="links">
           <br/>
