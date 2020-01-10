@@ -9,7 +9,7 @@ export default (state = [], action = {}) => {
         case CREATE_DESCRIPTION: 
         return {
             ...state, 
-            descriptions: [...state.description, 
+            descriptions: [...state.descriptions, 
             action.payload]
           }
         default:

@@ -8,7 +8,6 @@ class ImageDetailsContainer extends React.Component {
       console.log(this.props.match, "WHAT IS THIS.PROPS.MATCH??")
       this.props.loadImage(Number(this.props.match.params.id));
     }
-
     state = {
       text: "",
     }

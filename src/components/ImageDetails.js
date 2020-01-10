@@ -37,11 +37,9 @@ const classes = useStyles();
     <i>{props.image.descriptions.map(description => {
       return (
         <div>
-          <li key={description.id}>
             <div>
               <i>{description.text}</i>
             </div>
-          </li>
         </div>
       )
     })}</i>
