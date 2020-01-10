@@ -4,6 +4,7 @@ import { url } from "../url"
 export const FETCH_IMAGEBOARD = "FETCH_IMAGEBOARD";
 export const FETCH_IMAGE = "FETCH_IMAGE"
 export const ADD_IMAGE = "ADD_IMAGE"
+export const CREATE_DESCRIPTION = "CREATE_DESCRIPTION"
 
 const imageBoardFetch = images => ({
   type: FETCH_IMAGEBOARD,
@@ -54,6 +55,23 @@ export const createImage = (id) => (dispatch, getState) => {
   .send(id)
   .then(response => {
       dispatch(imageCreateSuccess(response.body));
+    })
+    .catch(console.error);
+};
+
+const descriptionCreateSuccess = description => ({
+  type: CREATE_DESCRIPTION,
+  payload: description
+});
+
+export const createDescription = (id) => (dispatch, getState) => {
+  const token = getState().auth
+  request
+  .post(`${url}/images/${id}/`)
+  .set ("Authorization", `Bearer ${token}`)
+  .send(id)
+  .then(response => {
+      dispatch(descriptionCreateSuccess(response.body));
     })
     .catch(console.error);
 };

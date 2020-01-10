@@ -31,19 +31,32 @@ const classes = useStyles();
     <img src={props.image.picture} 
     width="400" 
     height="400" 
-    alt="profile-pic" />
+    alt="profile-pic"
+    className="images" />
     <br/>
+    <i>{props.image.descriptions.map(description => {
+      return (
+        <div>
+          <li key={description.id}>
+            <div>
+              <i>{description.text}</i>
+            </div>
+          </li>
+        </div>
+      )
+    })}</i>
     <form
     onSubmit={props.onSubmit}>
-      <TextField 
+    <TextField 
       id="standard-multiline-flexible"
       label="Multiline"
       multiline
       rowsMax="4"
-      name="description"
-        // value={props.values.picture} 
-        // onChange={props.onChange}
-        label="Description"/>
+      type="text"
+      name="text"
+      value={props.values.text} 
+      onChange={props.onChange}
+      label="Description"/>
         <Button default type="submit">Add a description <br/> of your travel</Button>
       </form>
       </Grid>
