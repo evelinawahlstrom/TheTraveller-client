@@ -1,8 +1,8 @@
 import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
-import Fab from '@material-ui/core/Fab';
-import EditIcon from '@material-ui/icons/Edit';
 import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';;
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -10,6 +10,8 @@ const useStyles = makeStyles(theme => ({
         margin: theme.spacing(1),
         flexGrow: 1,
       },
+      position: 'center',
+      textAlign: 'center'
     },
     extendedIcon: {
       marginRight: theme.spacing(1),
@@ -31,12 +33,19 @@ const classes = useStyles();
     height="400" 
     alt="profile-pic" />
     <br/>
-    <Fab 
-    color="primary" 
-    size="small"
-    aria-label="edit">
-        <EditIcon />
-      </Fab>
+    <form
+    onSubmit={props.onSubmit}>
+      <TextField 
+      id="standard-multiline-flexible"
+      label="Multiline"
+      multiline
+      rowsMax="4"
+      name="description"
+        // value={props.values.picture} 
+        // onChange={props.onChange}
+        label="Description"/>
+        <Button default type="submit">Add a description <br/> of your travel</Button>
+      </form>
       </Grid>
       </Grid>
     </div>

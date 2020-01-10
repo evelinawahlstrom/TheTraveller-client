@@ -57,18 +57,3 @@ export default function ImageBoard(props) {
 }
 
 
-// <div>
-// <input 
-// accept="image/*" 
-// className={classes.input} 
-// id="icon-button-file" type="file" />
-// <label htmlFor="icon-button-file">
-//   <IconButton 
-//   color="primary" 
-//   aria-label="upload picture" 
-//   component="span"
-//   size="medium">
-//     <PhotoCamera />
-//   </IconButton>
-// </label>
-// </div>
