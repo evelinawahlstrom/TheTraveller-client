@@ -15,9 +15,8 @@ I wanted to create a "instagram for travellers". I myself, love to travel and co
 3.	As a user I am able to add images from my travels.
 4.	As a user when I click on an image, I’m redirected to the that image description endpoint (/image/id).
 5.	At the /image/id I’m able to add a description, edit my current descriptions and also delete a description.
-6.	After editing/deleting/adding a description I click “save", I’m then redirected to the image board.
-7. As a user I can search for a specific destination and will get information about that destination in return
-8. As a user I'm able to log out from my profile.
+6. As a user I can search for a specific destination and will get information about that destination in return
+7. As a user I'm able to log out from my profile.
 
 ## Related repositories
 **[Server](https://github.com/evelinawahlstrom/TheTraveller-server)**
