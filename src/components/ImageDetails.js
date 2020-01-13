@@ -32,7 +32,7 @@ const classes = useStyles();
     width="400" 
     height="400" 
     alt="profile-pic"
-    className="images" />
+    className="image" />
     <br/>
     <i>{props.image.descriptions.map(description => {
       return (

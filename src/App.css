@@ -79,5 +79,20 @@
 }
 
 .images {
-  border-radius: 40px;
+  border-radius: 50pc;
+  justify-content: center;
+  padding: 10px;
+}
+
+.image {
+  border-radius: 50pc;
+  justify-content: center;
+  border: solid;
+  border-color: white;
+}
+
+.imageboard {
+  flex-direction: wrap;
+  justify-content: center;
+  align-content: space-between;
 }
