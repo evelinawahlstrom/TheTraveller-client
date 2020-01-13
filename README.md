@@ -58,6 +58,7 @@ This project was developer with the help of using the create-react-app cli.
 
 - As a user I want to be able to register with an email + password. 
 - As a user I then want to be able to login to my profile page.
+- As a user I am able to add images from my travels.
 - As a user when I click on an image, I’m redirected to the that image description endpoint (/image/id).
 
 ## Gif showcasing my project
