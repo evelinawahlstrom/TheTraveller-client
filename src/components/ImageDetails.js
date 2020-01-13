@@ -2,6 +2,8 @@ import React from "react";
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
 import { makeStyles } from '@material-ui/core/styles';;
 
 const useStyles = makeStyles(theme => ({
@@ -15,6 +17,9 @@ const useStyles = makeStyles(theme => ({
     },
     extendedIcon: {
       marginRight: theme.spacing(1),
+    },
+    margin: {
+      margin: theme.spacing(1),
     },
   }));
 
@@ -32,7 +37,7 @@ const classes = useStyles();
     width="400" 
     height="400" 
     alt="profile-pic"
-    className="image" />
+    className="image"/>
     <br/>
     <i>{props.image.descriptions.map(description => {
       return (
@@ -57,6 +62,12 @@ const classes = useStyles();
       label="Description"/>
         <Button default type="submit">Add a description <br/> of your travel</Button>
       </form>
+      <IconButton 
+      aria-label="delete" 
+      className={classes.margin}
+      onClick={() => props.onClick(props.image.id)}>
+          <DeleteIcon fontSize='large' />
+        </IconButton>
       </Grid>
       </Grid>
     </div>

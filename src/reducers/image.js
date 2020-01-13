@@ -1,4 +1,4 @@
-import { FETCH_IMAGE, CREATE_DESCRIPTION } from "../actions/images";
+import { FETCH_IMAGE, CREATE_DESCRIPTION, DELETE_IMAGE } from "../actions/images";
 
 export default (state = [], action = {}) => {
     console.log("STATE", state, "ACTION", action);
@@ -12,6 +12,7 @@ export default (state = [], action = {}) => {
             descriptions: [...state.descriptions, 
             action.payload]
           }
+
         default:
             return state;
     }

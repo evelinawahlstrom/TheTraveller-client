@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { loadImage, createDescription } from "../actions/images"
+import { loadImage, createDescription, deleteImage } from "../actions/images"
 import ImageDetails from './ImageDetails'
 
 class ImageDetailsContainer extends React.Component {
@@ -27,12 +27,17 @@ class ImageDetailsContainer extends React.Component {
         text: "",
     })
 }
+
+  onClick = (imageId) => {
+  this.props.deleteImage(imageId)
+  }
     render() {
       return (
         <ImageDetails 
         image={this.props.image}
         onSubmit={this.onSubmit}
         onChange={this.onChange}
+        onClick={this.onClick}
         values={this.state}/>
       );
     }
@@ -41,11 +46,12 @@ class ImageDetailsContainer extends React.Component {
   const mapStateToProps = state => {
     return {
       image: state.image,
-      imageId: state.image.id
+      imageId: state.image.id,
+      images: state.images
     }
   }
   
-  const mapDispatchToProps = { loadImage, createDescription }
+  const mapDispatchToProps = { loadImage, createDescription, deleteImage }
   
   export default connect(
     mapStateToProps, mapDispatchToProps

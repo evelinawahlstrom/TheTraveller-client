@@ -8,6 +8,7 @@ class ImageBoardContainer extends Component {
   componentDidMount() {
     this.props.loadImageBoard();
   }
+
   render() {
     console.log(this.props);
     return (
