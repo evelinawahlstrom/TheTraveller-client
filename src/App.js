@@ -12,6 +12,7 @@ import ImageBoardContainer from './components/ImageBoardContainer'
 import ImageDetailsContainer from './components/ImageDetailsContainer'
 import Homepage from './components/Homepage'
 import LogoutContainer from './components/LogoutContainer';
+import Destination from './components/Destination'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,6 +46,8 @@ export default function App() {
           <div className="links"><Link to="/login"><Button color="primary">Login</Button></Link>| 
           <Link to="/signup"><Button color="primary">Sign up</Button></Link>|
           <Link to="/images"><Button color="primary">Image Board</Button></Link>|
+          <Link to="/destinations"><Button color="primary">Destinations</Button>
+          </Link>|
           <Link to="/">
           <Route path="/logout" exact component={LogoutContainer}/><Button color="primary">Log out</Button>
           </Link>
@@ -54,10 +57,11 @@ export default function App() {
       <Route path="/" exact component={Homepage}/>
       </div>
       <div>
-      <Route path="/login" exact component={LoginFormContainer} />
-      <Route path="/signup" exact component={SignupContainer} />
+      <Route path="/login" exact component= {LoginFormContainer} />
+      <Route path="/signup" exact component= {SignupContainer} />
       <Route path="/images" exact component= {ImageBoardContainer} />
       <Route path="/images/:id" exact component= {ImageDetailsContainer} />
+      <Route path="/destinations" exact component= {Destination}/>
       </div>
       </div>
       )}
