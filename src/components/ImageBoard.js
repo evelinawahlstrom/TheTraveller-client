@@ -10,11 +10,6 @@ const useStyles = makeStyles(theme => ({
   root: {
       margin: theme.spacing(12),
       flexGrow: 1,
-      paddingTop: 1,
-      paddingLeft: 200,
-      paddingRight: 100,
-      paddingBottom: 10,
-      borderRadius: '25px',
   },
   input: {
     display: 'none',
@@ -37,38 +32,23 @@ export default function ImageBoard(props) {
   return (
     <div className={classes.root}>
     <Grid container spacing={10}>
-    <Paper className={classes.paper}>
-    <Grid item xl={10} md={10}>
+    <div className="imageboard">
       {props.images.map(image => {
         return (
          <Link to={`/images/${image.id}`}>
-          <img src={image.picture} 
+          <img 
+          className="images"
+          src={image.picture} 
           width="250px" 
           height="250px" 
-          alt="image-pic" />
+          alt="image-pic"/>
           </Link>
         );
       })}
-      </Grid>
-      </Paper>
+      </div>
       </Grid>
     </div>
   );
 }
 
 
-// <div>
-// <input 
-// accept="image/*" 
-// className={classes.input} 
-// id="icon-button-file" type="file" />
-// <label htmlFor="icon-button-file">
-//   <IconButton 
-//   color="primary" 
-//   aria-label="upload picture" 
-//   component="span"
-//   size="medium">
-//     <PhotoCamera />
-//   </IconButton>
-// </label>
-// </div>

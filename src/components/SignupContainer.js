@@ -30,6 +30,7 @@ export default class SignupContainer extends Component {
             email: "",
             password: ""
         })
+        this.props.history.push(`/login`)
     }
 
     render() {
