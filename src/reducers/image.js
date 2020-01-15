@@ -13,9 +13,7 @@ export default (state = [], action = {}) => {
             action.payload]
           }
         case DELETE_IMAGE: 
-        return {...state,
-          image: state.image.filter(image => image.id != action.payload)
-          }
+        return {}
         default:
             return state;
     }
