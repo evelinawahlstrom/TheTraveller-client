@@ -9,6 +9,7 @@ export default (state = [], action = {}) => {
         case ADD_IMAGE:
             return [...state, { ...action.payload }]
         case DELETE_IMAGE: 
+        // this will filter on the original array of images
             return state.filter(image => image.id !== action.payload);
         default:
             return state;
