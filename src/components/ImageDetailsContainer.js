@@ -30,7 +30,9 @@ class ImageDetailsContainer extends React.Component {
 
   onClick = (imageId) => {
   this.props.deleteImage(imageId)
+  this.props.history.push(`/images`)
   }
+
     render() {
       return (
         <ImageDetails 
