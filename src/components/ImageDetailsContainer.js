@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { loadImage, createDescription, deleteImage } from "../actions/images"
+import { editDescription } from "../actions/description"
 import ImageDetails from './ImageDetails'
 
 class ImageDetailsContainer extends React.Component {
@@ -10,6 +11,7 @@ class ImageDetailsContainer extends React.Component {
     }
     state = {
       text: "",
+      editMode: false
     }
 
   onChange = event => {
@@ -33,6 +35,35 @@ class ImageDetailsContainer extends React.Component {
   this.props.history.push(`/images`)
   }
 
+  onEdit = () => {
+    // intialize editing mode:
+    // set the starting value of the fields to the event details
+    this.setState({
+      editMode: true,
+      formValues: {
+        text: this.props.description.text,
+      }
+    })
+  }
+
+  onEditChange = (event) => {
+    // update the formValues property with the new data from the input field
+    this.setState({
+      formValues: {
+        ...this.state.formValues,
+        [event.target.name]: event.target.value
+      }
+    })
+  }
+
+  onEditSubmit = (event) => {
+    event.preventDefault()
+    this.setState({
+      editMode: false
+    })
+    this.props.editDescription(this.props.description.id, this.state.formValues)
+  }
+
     render() {
       return (
         <ImageDetails 
@@ -40,6 +71,9 @@ class ImageDetailsContainer extends React.Component {
         onSubmit={this.onSubmit}
         onChange={this.onChange}
         onClick={this.onClick}
+        onEdit={this.onEdit}
+        onEditChange={this.onEditChange}
+        onEditSubmit={this.onEditSubmit}
         values={this.state}/>
       );
     }
@@ -49,11 +83,12 @@ class ImageDetailsContainer extends React.Component {
     return {
       image: state.image,
       imageId: state.image.id,
-      images: state.images
+      images: state.images,
+      description: state.description.id
     }
   }
   
-  const mapDispatchToProps = { loadImage, createDescription, deleteImage }
+  const mapDispatchToProps = { loadImage, createDescription, deleteImage, editDescription }
   
   export default connect(
     mapStateToProps, mapDispatchToProps

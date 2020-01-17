@@ -70,7 +70,13 @@ const classes = useStyles();
       onClick={() => props.onClick(props.image.id)}>
           <DeleteIcon fontSize='large' />
         </IconButton>
-        <Fab size="small" color="primary" aria-label="edit">
+        <Fab 
+        size="small" 
+        color="primary" 
+        aria-label="edit"
+        onEdit={props.onEdit}
+        onEditChange={props.onEditChange}
+        formValues={props.values.text}>
         <EditIcon />
       </Fab>
       </Grid>
