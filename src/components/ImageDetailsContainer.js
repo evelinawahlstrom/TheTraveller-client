@@ -30,38 +30,19 @@ class ImageDetailsContainer extends React.Component {
     })
 }
 
-  onClick = (imageId) => {
+
+onEdit = () => {
+  // intialize editing mode, toggle the editMode
+  // set the starting value of the fields to the event details
+  this.setState({
+    editMode: true,
+    text: ""
+  })
+}
+
+onClick = (imageId) => {
   this.props.deleteImage(imageId)
   this.props.history.push(`/images`)
-  }
-
-  onEdit = () => {
-    // intialize editing mode:
-    // set the starting value of the fields to the event details
-    this.setState({
-      editMode: true,
-      formValues: {
-        text: this.props.description.text,
-      }
-    })
-  }
-
-  onEditChange = (event) => {
-    // update the formValues property with the new data from the input field
-    this.setState({
-      formValues: {
-        ...this.state.formValues,
-        [event.target.name]: event.target.value
-      }
-    })
-  }
-
-  onEditSubmit = (event) => {
-    event.preventDefault()
-    this.setState({
-      editMode: false
-    })
-    this.props.editDescription(this.props.description.id, this.state.formValues)
   }
 
     render() {
@@ -72,8 +53,6 @@ class ImageDetailsContainer extends React.Component {
         onChange={this.onChange}
         onClick={this.onClick}
         onEdit={this.onEdit}
-        onEditChange={this.onEditChange}
-        onEditSubmit={this.onEditSubmit}
         values={this.state}/>
       );
     }

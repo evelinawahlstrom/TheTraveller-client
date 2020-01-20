@@ -4,8 +4,6 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
-import Fab from '@material-ui/core/Fab';
-import EditIcon from '@material-ui/icons/Edit';
 import { makeStyles } from '@material-ui/core/styles';;
 
 const useStyles = makeStyles(theme => ({
@@ -47,6 +45,9 @@ const classes = useStyles();
             <div>
               <i>{description.text}</i>
             </div>
+            <div className={classes.root}>
+            <Button onEdit={props.onEdit} type="submit" disabled>Edit</Button>
+            </div>
         </div>
       )
     })}</i>
@@ -70,15 +71,6 @@ const classes = useStyles();
       onClick={() => props.onClick(props.image.id)}>
           <DeleteIcon fontSize='large' />
         </IconButton>
-        <Fab 
-        size="small" 
-        color="primary" 
-        aria-label="edit"
-        onEdit={props.onEdit}
-        onEditChange={props.onEditChange}
-        formValues={props.values.text}>
-        <EditIcon />
-      </Fab>
       </Grid>
       </Grid>
     </div>
