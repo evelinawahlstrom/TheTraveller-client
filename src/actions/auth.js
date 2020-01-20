@@ -16,3 +16,8 @@ export const login = (email, password) => (dispatch, getState) => {
         })
         .catch(console.error);
 };
+
+
+export const logout = () => dispatch => {
+  return dispatch({ type: USER_LOGOUT });
+};
