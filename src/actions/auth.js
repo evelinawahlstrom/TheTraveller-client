@@ -2,6 +2,7 @@ import request from "superagent";
 import { url } from "../url"
 
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const USER_LOGOUT = "USER_LOGOUT";
 
 export const login = (email, password) => (dispatch, getState) => {
     console.log(email, password);

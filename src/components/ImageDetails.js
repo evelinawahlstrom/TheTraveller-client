@@ -46,7 +46,7 @@ const classes = useStyles();
               <i>{description.text}</i>
             </div>
             <div className={classes.root}>
-            <Button onEdit={props.onEdit} type="submit" disabled>Edit</Button>
+            <Button onClick={props.onEdit} type="submit" color="primary">Edit</Button>
             </div>
         </div>
       )

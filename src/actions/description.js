@@ -8,15 +8,15 @@ const updateDescriptionSuccess = description => ({
     payload: description
   });
   
-  export const editDescription = (id) => (dispatch, getState) => {
+  export const editDescription = (id, data) => (dispatch, getState) => {
     const token = getState().auth
     request
     .put(`${url}/images/${id}`)
       .set ("Authorization", `Bearer ${token}`)
-      .send(id)
+      .send(data)
       .then(response => {
           console.log(response, 'what is response of editDesc?')
-        dispatch(updateDescriptionSuccess(id));
+        dispatch(updateDescriptionSuccess(response.body));
       })
       .catch(console.error)
   };

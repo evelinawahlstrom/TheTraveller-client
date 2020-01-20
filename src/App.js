@@ -11,7 +11,7 @@ import LoginFormContainer from './components/LoginFormContainer'
 import ImageBoardContainer from './components/ImageBoardContainer'
 import ImageDetailsContainer from './components/ImageDetailsContainer'
 import Homepage from './components/Homepage'
-import LogoutContainer from './components/LogoutContainer';
+import Logout from './components/Logout';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,8 +45,7 @@ export default function App() {
           <div className="links"><Link to="/login"><Button color="primary">Login</Button></Link>| 
           <Link to="/signup"><Button color="primary">Sign up</Button></Link>|
           <Link to="/images"><Button color="primary">Image Board</Button></Link>|
-          <Link to="/">
-          <Route path="/logout" exact component={LogoutContainer}/><Button color="primary">Log out</Button>
+          <Link to="/"><Route path="/logout" exact component={Logout}/><Button color="primary">Log out</Button>
           </Link>
           </div>
         </Toolbar>

@@ -1,8 +1,9 @@
+  
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom'
 
-class LogoutContainer extends Component {
+class Logout extends Component {
 
     componentDidMount() {
       this.props.dispatch({
@@ -21,4 +22,4 @@ class LogoutContainer extends Component {
   }
 
   
-export default connect()(LogoutContainer);
+export default connect()(Logout);

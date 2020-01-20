@@ -1,8 +1,10 @@
 import React from "react";
+import Button from '@material-ui/core/Button';
 import { connect } from "react-redux";
 import { loadImage, createDescription, deleteImage } from "../actions/images"
 import { editDescription } from "../actions/description"
 import ImageDetails from './ImageDetails'
+import EditDescription from './EditDescription'
 
 class ImageDetailsContainer extends React.Component {
     componentDidMount() {
@@ -30,15 +32,12 @@ class ImageDetailsContainer extends React.Component {
     })
 }
 
-
 onEdit = () => {
-  // intialize editing mode, toggle the editMode
-  // set the starting value of the fields to the event details
   this.setState({
-    editMode: true,
-    text: ""
-  })
-}
+    editMode: true
+  });
+};
+
 
 onClick = (imageId) => {
   this.props.deleteImage(imageId)
@@ -47,13 +46,20 @@ onClick = (imageId) => {
 
     render() {
       return (
+        <div>
         <ImageDetails 
         image={this.props.image}
         onSubmit={this.onSubmit}
         onChange={this.onChange}
         onClick={this.onClick}
-        onEdit={this.onEdit}
-        values={this.state}/>
+        values={this.state}
+        />
+        {this.state.editMode ? (
+          <EditDescription />
+        ) : (
+          <Button onClick={this.onEdit} type="submit" color="primary">Edit</Button>
+        )}
+        </div>
       );
     }
   }
