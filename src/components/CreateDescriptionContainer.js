@@ -1,19 +1,16 @@
 import React from "react";
 import Button from '@material-ui/core/Button';
 import { connect } from "react-redux";
-import { loadImage, deleteImage } from "../actions/images"
-import { editDescription } from "../actions/description"
+import { createDescription, loadImage } from "../actions/images"
 import ImageDetails from './ImageDetails'
-import CreateDescriptionContainer from './CreateDescriptionContainer'
 
-class ImageDetailsContainer extends React.Component {
+class CreateDescriptionContainer extends React.Component {
     componentDidMount() {
       console.log(this.props.match, "WHAT IS THIS.PROPS.MATCH??")
       this.props.loadImage(Number(this.props.match.params.id));
     }
     state = {
       text: "",
-      editMode: false
     }
 
   onChange = event => {
@@ -23,41 +20,27 @@ class ImageDetailsContainer extends React.Component {
   }
   onSubmit = event => {
     event.preventDefault();
-    this.props.editDescription(this.props.description);
+    this.props.createDescription({
+        ...this.state,
+        imageId: this.props.imageId
+    });
     this.setState({
-        editMode: false
+        text: "",
     })
 }
-
-onEdit = () => {
-  this.setState({
-    editMode: true
-  });
-};
-
-onClick = (imageId) => {
-  this.props.deleteImage(imageId)
-  this.props.history.push(`/images`)
-  }
 
     render() {
       return (
         <div>
-        {this.state.editMode === false ?
-        <div> 
         <ImageDetails 
         image={this.props.image}
-        text={this.props.description}
+        onSubmit={this.onSubmit}
+        onChange={this.onChange}
+        onClick={this.onClick}
         values={this.state}
-        onSubmit={this.onSubmit}
-        onChange={this.onChange}
-        onClick={this.onClick}/>
+        />
         </div>
-      : <ImageDetails
-        onSubmit={this.onSubmit}
-        onChange={this.onChange}
-        values={this.state} />}
-        </div>);
+      );
     }
   }
   
@@ -70,8 +53,8 @@ onClick = (imageId) => {
     }
   }
   
-  const mapDispatchToProps = { loadImage, deleteImage, editDescription }
+  const mapDispatchToProps = { createDescription, loadImage }
   
   export default connect(
     mapStateToProps, mapDispatchToProps
-  )(ImageDetailsContainer);
+  )(CreateDescriptionContainer);
