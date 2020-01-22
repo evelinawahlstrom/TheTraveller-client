@@ -13,7 +13,6 @@ class ImageDetailsContainer extends React.Component {
     }
     state = {
       text: "",
-      editMode: false
     }
 
   onChange = event => {
@@ -32,12 +31,10 @@ class ImageDetailsContainer extends React.Component {
     })
 }
 
-onEdit = () => {
-  this.setState({
-    editMode: true
-  });
+onEdit = event => {
+  event.preventDefault();
+  this.props.editDescription(this.props.description.id, this.state);
 };
-
 
 onClick = (imageId) => {
   this.props.deleteImage(imageId)
@@ -54,11 +51,6 @@ onClick = (imageId) => {
         onClick={this.onClick}
         values={this.state}
         />
-        {this.state.editMode ? (
-          <EditDescription />
-        ) : (
-          <Button onClick={this.onEdit} type="submit" color="primary">Edit</Button>
-        )}
         </div>
       );
     }

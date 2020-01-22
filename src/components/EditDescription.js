@@ -1,7 +1,7 @@
-  
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { editDescription } from "../actions/description";
+import ImageDetails from "./ImageDetails"
 
 class EditDescription extends Component {
   state = {
@@ -24,12 +24,12 @@ class EditDescription extends Component {
     console.log("STATE IN EDIT", this.state);
     return (
       <form onSubmit={this.onSubmit}>
-        <input 
-        value={this.state.text} 
-        name="text" 
-        onChange={this.onChange} />
-        <input type="submit" />
-      </form>
+      <input 
+      value={this.state.text} 
+      name="text" 
+      onChange={this.onChange} />
+      <input type="submit" />
+    </form>
     );
   }
 }
