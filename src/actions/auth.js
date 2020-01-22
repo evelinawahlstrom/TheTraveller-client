@@ -18,6 +18,10 @@ export const login = (email, password) => (dispatch, getState) => {
 };
 
 
-export const logout = () => dispatch => {
-  return dispatch({ type: USER_LOGOUT });
-};
+export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+export const logout = () => {
+  return ({
+    type: LOGOUT_SUCCESS,
+    payload: null
+  })
+}

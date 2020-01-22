@@ -1,4 +1,4 @@
-import { LOGIN_SUCCESS, USER_LOGOUT } from "../actions/auth";
+import { LOGIN_SUCCESS, LOGOUT_SUCCESS } from "../actions/auth";
 
 const token = localStorage.getItem("jwt");
 const initialState = token ? token : null;
@@ -8,8 +8,9 @@ export default (state = initialState, action = {}) => {
     case LOGIN_SUCCESS:
       localStorage.setItem("jwt", action.payload);
       return action.payload;
-    case USER_LOGOUT:
-      return initialState
+      case LOGOUT_SUCCESS:
+        localStorage.removeItem("jwt");
+        return action.payload
     default:
       return state;
   }
