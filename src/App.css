@@ -85,7 +85,9 @@
 }
 
 .image {
+  max-width: 1050px;
   border-radius: 50pc;
+  margin: 10px auto;
   justify-content: center;
   border: solid;
   border-color: thistle;
@@ -95,4 +97,16 @@
   flex-direction: wrap;
   justify-content: center;
   align-content: space-between;
+  max-width: 1050px;
+  margin: 10px auto;
+}
+
+.grid {
+  max-width: 1050px;
+  margin: 100px auto;
+  justify-content: center;
+}
+
+.imagegrid {
+  margin: 30px auto;
 }

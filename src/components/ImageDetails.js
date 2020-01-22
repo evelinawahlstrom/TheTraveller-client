@@ -29,7 +29,7 @@ const classes = useStyles();
   console.log(props.image, "what is props.images??")
   return (
     <div className={classes.root}>
-    <Grid container spacing={3}>
+    <Grid container spacing={10}>
     <Grid item md={10}>
     <h4>{props.image.name}</h4>
     <br/>
